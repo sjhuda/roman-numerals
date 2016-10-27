@@ -2,8 +2,8 @@
 
 class RomanNumeralConverter
 {
-    public function convert()
+    public function convert($number)
     {
-        return 'I';
+        return str_repeat('I', $number);
     }
 }
