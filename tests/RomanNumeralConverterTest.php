@@ -19,4 +19,13 @@ class RomanNumeralConverterTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('II', $roman_numeral);
     }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_5()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(5);
+
+        $this->assertEquals('V', $roman_numeral);
+    }
 }
