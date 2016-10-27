@@ -4,15 +4,13 @@ class RomanNumeralConverter
 {
     public function convert($number)
     {
-        if ($number > 5) {
-            $number = $number - 5;
-            return 'V' . str_repeat('I', $number);
-        }
+        $result = '';
 
-        if ($number == 5) {
-            return 'V';
+        if ($number >= 5) {
+            $result .= 'V';
+            $number -= 5;
         }
-
-        return str_repeat('I', $number);
+        $result .= str_repeat('I', $number);
+        return $result;
     }
 }
