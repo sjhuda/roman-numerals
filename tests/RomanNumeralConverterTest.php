@@ -92,4 +92,22 @@ class RomanNumeralConverterTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('LV', $roman_numeral);
     }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_4()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(4);
+
+        $this->assertEquals('IV', $roman_numeral);
+    }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_54()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(54);
+
+        $this->assertEquals('LIV', $roman_numeral);
+    }
 }

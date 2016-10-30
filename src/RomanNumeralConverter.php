@@ -20,6 +20,12 @@ class RomanNumeralConverter
             $result .= 'V';
             $number -= 5;
         }
+
+        if ($number >= 4) {
+            $result .= 'IV';
+            $number -= 4;
+        }
+
         $result .= str_repeat('I', $number);
         return $result;
     }
