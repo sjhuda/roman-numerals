@@ -56,4 +56,40 @@ class RomanNumeralConverterTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('XI', $roman_numeral);
     }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_20()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(20);
+
+        $this->assertEquals('XX', $roman_numeral);
+    }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_50()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(50);
+
+        $this->assertEquals('L', $roman_numeral);
+    }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_51()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(51);
+
+        $this->assertEquals('LI', $roman_numeral);
+    }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_55()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(55);
+
+        $this->assertEquals('LV', $roman_numeral);
+    }
 }
