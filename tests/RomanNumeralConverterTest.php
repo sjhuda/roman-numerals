@@ -128,4 +128,13 @@ class RomanNumeralConverterTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('XXIX', $roman_numeral);
     }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_100()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(100);
+
+        $this->assertEquals('C', $roman_numeral);
+    }
 }

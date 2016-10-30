@@ -6,6 +6,11 @@ class RomanNumeralConverter
     {
         $result = '';
 
+        while ($number >= 100) {
+            $result .= 'C';
+            $number -= 100;
+        }
+
         while ($number >= 50) {
             $result .= 'L';
             $number -= 50;
