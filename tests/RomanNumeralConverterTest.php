@@ -137,4 +137,40 @@ class RomanNumeralConverterTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('C', $roman_numeral);
     }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_1000()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(1000);
+
+        $this->assertEquals('M', $roman_numeral);
+    }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_4990()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(4990);
+
+        $this->assertEquals('MMMMCMXC', $roman_numeral);
+    }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_3999()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(3999);
+
+        $this->assertEquals('MMMCMXCIX', $roman_numeral);
+    }
+
+    /** @test */
+    public function it_calculates_the_roman_numeral_for_2598()
+    {
+        $converter = new RomanNumeralConverter();
+        $roman_numeral = $converter->convert(2598);
+
+        $this->assertEquals('MMDXCVIII', $roman_numeral);
+    }
 }
